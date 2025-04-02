@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "sots",
+	"version": "${version}",
+	"name": "Shadows of the Silence",
+	"description": "The official mod for the horror map 'Shadows of the Silence' by Bix!",
+	"authors": [
+		"Bix"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/sots/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"bixstudio.sots.ShadowsOfTheSilence"
+		],
+		"client": [
+			"bixstudio.sots.ShadowsOfTheSilenceClient"
+		],
+		"fabric-datagen": [
+			"bixstudio.sots.ShadowsOfTheSilenceDataGenerator"
+		]
+	},
+	"mixins": [
+		"sots.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.10",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
