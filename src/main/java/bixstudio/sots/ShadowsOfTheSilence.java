@@ -1,5 +1,8 @@
 package bixstudio.sots;
 
+import bixstudio.sots.block.ModBlocks;
+import bixstudio.sots.item.ModItemGroups;
+import bixstudio.sots.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
@@ -12,7 +15,9 @@ public class ShadowsOfTheSilence implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+		ModItemGroups.registerItemGroups();
 
-
+		ModItems.registerModItems();
+		ModBlocks.registerModBlocks();
 	}
 }
