@@ -15,6 +15,7 @@ public class ModItemGroups {
     public static final ItemGroup SHADOWS_OF_THE_SILENCE = Registry.register(Registries.ITEM_GROUP,
             Identifier.of(ShadowsOfTheSilence.MOD_ID, "sots_tab"),
             FabricItemGroup.builder()
+                    .icon(() -> new ItemStack(ModBlocks.SPRAYED_WALL))
                     .displayName(Text.translatable("itemgroups.sots.sots_tab"))
                     .entries(((displayContext, entries) ->{
                         entries.add(ModBlocks.SPRAYED_WALL);

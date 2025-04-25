@@ -19,8 +19,8 @@ float rand(float x) {
 
 // Sehr seltener horizontaler Glitch-Effekt
 vec2 glitchUV(vec2 uv, float time) {
-    float glitchFreq = 0.0000005; // nur 0.5% der Zeilen betroffen
-    float line = floor(uv.y * 150.0); // mehr Linien, noch seltenerer Effekt
+    float glitchFreq = 0.00000000000000005;
+    float line = floor(uv.y * 15.0); // mehr Linien, noch seltenerer Effekt
     float glitchChance = rand(line + floor(time * 1.5));
 
     if (glitchChance < glitchFreq) {
