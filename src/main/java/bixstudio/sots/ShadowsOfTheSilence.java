@@ -1,6 +1,7 @@
 package bixstudio.sots;
 
 import bixstudio.sots.block.ModBlocks;
+import bixstudio.sots.blockentity.ModBlockEntities;
 import bixstudio.sots.item.ModItemGroups;
 import bixstudio.sots.item.ModItems;
 import net.fabricmc.api.ModInitializer;
@@ -19,5 +20,7 @@ public class ShadowsOfTheSilence implements ModInitializer {
 
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
+		ModBlockEntities.registerModBlockEntities();
+
 	}
 }

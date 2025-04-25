@@ -13,7 +13,7 @@ import net.minecraft.util.Identifier;
 public class ModBlocks {
 
     public static final Block SPRAYED_WALL = registerBlock("sprayed_wall",
-            new Block(AbstractBlock.Settings.create().strength(4.0f).sounds(BlockSoundGroup.STONE)));
+            new SprayedWallBlock(AbstractBlock.Settings.create().strength(4.0f).sounds(BlockSoundGroup.STONE)));
 
 
     private static Block registerBlock(String name, Block block){
