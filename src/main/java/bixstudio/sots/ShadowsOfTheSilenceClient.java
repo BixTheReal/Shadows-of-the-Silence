@@ -10,6 +10,7 @@ import foundry.veil.fabric.event.FabricVeilRenderLevelStageEvent;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.fabricmc.fabric.api.client.networking.v1.ClientPlayConnectionEvents;
+import net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.render.block.entity.BlockEntityRendererFactories;
 
@@ -22,6 +23,8 @@ public class ShadowsOfTheSilenceClient implements ClientModInitializer {
     public void onInitializeClient() {
         KeyBindsManager.register();
         ShaderManager.initialize();
+
+        BlockEntityRendererFactories.register(ModBlockEntities.SPRAYED_WALL_BE, SprayedWallBERender::new);
 
         ClientPlayConnectionEvents.DISCONNECT.register((handler, client) -> {
             UUID playerUuid = MinecraftClient.getInstance().getSession().getUuidOrNull();
