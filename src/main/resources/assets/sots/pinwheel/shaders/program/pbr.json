@@ -1,0 +1,27 @@
+{
+  "vertex": "sots:pbr",
+  "fragment": "sots:pbr",
+  "samplers": [
+    {
+      "name": "DiffuseSampler",
+      "file": "sots:textures/block/sprayed_wall"
+    },
+    {
+      "name": "NormalSampler",
+      "file": "sots:textures/block/sprayed_wall_normal"
+    },
+    {
+      "name": "MetallicSampler",
+      "file": "sots:textures/block/sprayed_wall_metallic"
+    },
+    {
+      "name": "RoughnessSampler",
+      "file": "sots:textures/block/sprayed_wall_roughness"
+    }
+  ],
+  "attributes": ["Position", "Color", "UV0", "UV1"],
+  "uniforms": [
+    {"name": "ModelViewMat", "type": "mat4"},
+    {"name": "ProjMat", "type": "mat4"}
+  ]
+}

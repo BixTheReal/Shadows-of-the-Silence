@@ -1,0 +1,47 @@
+{
+  "format": "POSITION_COLOR_TEX_LIGHTMAP",
+  "mode": "QUADS",
+  "bufferSize": "TRANSIENT",
+  "sort": false,
+  "affectsCrumbling": true,
+  "outline": false,
+  "layers": [
+    {
+      "type": "minecraft:multi_texture",
+      "textures": [
+        {
+          "texture": "sots:textures/block/sprayed_wall.png",
+          "blur": false,
+          "mipmap": false
+        },
+        {
+          "texture": "sots:textures/block/sprayed_wall_normal.png",
+          "blur": false,
+          "mipmap": false
+        },
+        {
+          "texture": "sots:textures/block/sprayed_wall_metallic.png",
+          "blur": false,
+          "mipmap": false
+        },
+        {
+          "texture": "sots:textures/block/sprayed_wall_roughness.png",
+          "blur": false,
+          "mipmap": false
+        }
+      ]
+    },
+    {
+      "type": "veil:shader",
+      "name": "sots:pbr"
+    },
+    {
+      "type": "minecraft:lightmap"
+    },
+    {
+      "type": "minecraft:write_mask",
+      "color": true,
+      "depth": true
+    }
+  ]
+}
