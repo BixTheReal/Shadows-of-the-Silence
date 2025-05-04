@@ -1,5 +1,5 @@
 {
-  "format": "POSITION_COLOR_TEX_LIGHTMAP",
+  "format": "BLOCK",
   "mode": "QUADS",
   "bufferSize": "TRANSIENT",
   "sort": false,
@@ -10,22 +10,27 @@
       "type": "minecraft:multi_texture",
       "textures": [
         {
-          "texture": "sots:textures/block/sprayed_wall.png",
+          "texture": "%1$s.png",
           "blur": false,
           "mipmap": false
         },
         {
-          "texture": "sots:textures/block/sprayed_wall_normal.png",
+          "texture": "%1$s.png",
           "blur": false,
           "mipmap": false
         },
         {
-          "texture": "sots:textures/block/sprayed_wall_metallic.png",
+          "texture": "%1$s_normal.png",
           "blur": false,
           "mipmap": false
         },
         {
-          "texture": "sots:textures/block/sprayed_wall_roughness.png",
+          "texture": "%1$s_metallic.png",
+          "blur": false,
+          "mipmap": false
+        },
+        {
+          "texture": "%1$s_roughness.png",
           "blur": false,
           "mipmap": false
         }
