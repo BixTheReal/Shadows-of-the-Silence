@@ -25,12 +25,12 @@
           "mipmap": false
         },
         {
-          "texture": "%1$s_metallic.png",
+          "texture": "%1$s_roughness.png",
           "blur": false,
           "mipmap": false
         },
         {
-          "texture": "%1$s_roughness.png",
+          "texture": "%1$s_specular.png",
           "blur": false,
           "mipmap": false
         }

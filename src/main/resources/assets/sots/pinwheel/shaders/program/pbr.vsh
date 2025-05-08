@@ -1,24 +1,30 @@
 #version 150
 
-layout(location = 0) in vec3 Position;
-layout(location = 2) in vec2 UV0;
+#include veil:light
+#include veil:fog
 
-out vec2 texCoord0;
+in vec3 Position;
+in vec4 Color;
+in vec2 UV0;
+in ivec2 UV2;
+in vec3 Normal;
+
+uniform sampler2D Sampler2;
 
 uniform mat4 ModelViewMat;
 uniform mat4 ProjMat;
 uniform vec3 ChunkOffset;
+uniform int FogShape;
 
-
-const float TEXTURE_WIDTH = 2048.0;
-const float TEXTURE_HEIGHT = 2048.0;
-
-
-const float ATLAS_WIDTH = 16384.0;
-const float ATLAS_HEIGHT = 16384.0;
+out float vertexDistance;
+out vec4 vertexColor;
+out vec2 texCoord0;
 
 void main() {
     vec3 pos = Position + ChunkOffset;
     gl_Position = ProjMat * ModelViewMat * vec4(pos, 1.0);
-    texCoord0 = UV0 * vec2(ATLAS_WIDTH / TEXTURE_WIDTH, ATLAS_HEIGHT / TEXTURE_HEIGHT);
+
+    vertexDistance = fog_distance(pos, FogShape);
+    vertexColor = Color * minecraft_sample_lightmap(Sampler2, UV2);
+    texCoord0 = UV0;
 }
