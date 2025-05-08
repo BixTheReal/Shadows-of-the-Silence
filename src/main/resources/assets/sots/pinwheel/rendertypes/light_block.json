@@ -23,7 +23,7 @@
     },
     {
       "type": "veil:shader",
-      "name": "sots:pbr"
+      "name": "sots:light_block"
     },
     {
       "type": "minecraft:lightmap"
