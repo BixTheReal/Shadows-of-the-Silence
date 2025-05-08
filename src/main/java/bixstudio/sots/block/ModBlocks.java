@@ -15,7 +15,8 @@ public class ModBlocks {
     public static final Block SPRAYED_WALL = registerBlock("sprayed_wall",
             new SprayedWallBlock(AbstractBlock.Settings.create().strength(4.0f).sounds(BlockSoundGroup.STONE)));
 
-
+    public static final Block LIGHT_BLOCK = registerBlock("light_block",
+            new LightBlockBlock(AbstractBlock.Settings.create().strength(4.0f).sounds(BlockSoundGroup.STONE)));
 
 
 

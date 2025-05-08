@@ -1,5 +1,6 @@
 package bixstudio.sots;
 
+import bixstudio.sots.blockentity.LightBlockBERender;
 import bixstudio.sots.blockentity.ModBlockEntities;
 import bixstudio.sots.blockentity.SprayedWallBERender;
 import bixstudio.sots.keybinds.KeyBindsManager;
@@ -24,6 +25,7 @@ public class ShadowsOfTheSilenceClient implements ClientModInitializer {
         ShaderManager.initialize();
 
         BlockEntityRendererFactories.register(ModBlockEntities.SPRAYED_WALL_BE, SprayedWallBERender::new);
+        BlockEntityRendererFactories.register(ModBlockEntities.LIGHT_BLOCK_BE, LightBlockBERender::new);
 
 
         ClientPlayConnectionEvents.DISCONNECT.register((handler, client) -> {

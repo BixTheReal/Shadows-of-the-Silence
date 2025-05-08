@@ -1,0 +1,37 @@
+{
+  "format": "BLOCK",
+  "mode": "QUADS",
+  "bufferSize": "TRANSIENT",
+  "sort": false,
+  "affectsCrumbling": true,
+  "outline": false,
+  "layers": [
+    {
+      "type": "minecraft:multi_texture",
+      "textures": [
+        {
+          "texture": "%1$s.png",
+          "blur": false,
+          "mipmap": false
+        },
+        {
+          "texture": "%1$s.png",
+          "blur": false,
+          "mipmap": false
+        }
+      ]
+    },
+    {
+      "type": "veil:shader",
+      "name": "sots:pbr"
+    },
+    {
+      "type": "minecraft:lightmap"
+    },
+    {
+      "type": "minecraft:write_mask",
+      "color": true,
+      "depth": true
+    }
+  ]
+}

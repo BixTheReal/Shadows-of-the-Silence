@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "sots:block/light_block"
+    }
+  }
+}

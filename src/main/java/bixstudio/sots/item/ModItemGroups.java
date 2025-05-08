@@ -19,6 +19,7 @@ public class ModItemGroups {
                     .displayName(Text.translatable("itemgroups.sots.sots_tab"))
                     .entries(((displayContext, entries) ->{
                         entries.add(ModBlocks.SPRAYED_WALL);
+                        entries.add(ModBlocks.LIGHT_BLOCK);
                     }))
                     .build());
 
